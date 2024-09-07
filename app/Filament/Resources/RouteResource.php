@@ -42,7 +42,7 @@ class RouteResource extends Resource
                         'دورة كاملة' => 'دورة كاملة',
                         'دورة صغيرة' => 'دورة صغيرة',
                         "قطعة" => 'قطعة',
-                        
+
                     ]),
             ]);
     }
@@ -86,6 +86,11 @@ class RouteResource extends Resource
         return [
             //
         ];
+    }
+
+    protected function getRedirectUrl(): ?string
+    {
+        return static::getResource()::getUrl('index');
     }
 
     public static function getPages(): array

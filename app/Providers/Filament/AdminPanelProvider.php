@@ -36,7 +36,7 @@ class AdminPanelProvider extends PanelProvider
                     ->url('https://dashboard.onesignal.com/apps/c54d6dfe-27f3-4e1c-9251-ca82ef60eeb1/notifications/new', shouldOpenInNewTab: true)
                     ->group('اعدادات التطبيق')
                     ->sort(1)
-                    ->icon('heroicon-o-bell'),
+                    ->icon('heroicon-o-bell-alert'),
                 NavigationItem::make('خدمة العملاء')
                     ->url('https://dashboard.tawk.to/#/dashboard/66b924ae146b7af4a4391d1c', shouldOpenInNewTab: true)
                     ->group('اعدادات التطبيق')

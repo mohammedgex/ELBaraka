@@ -34,6 +34,7 @@ class User extends Authenticatable
         'password',
         'country',
         'is_active',
+        'image'
     ];
 
     /**

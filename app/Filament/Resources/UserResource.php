@@ -39,9 +39,7 @@ class UserResource extends Resource
                     ->label('رقم الهاتف')
                     ->required()
                     ->default(null),
-                Forms\Components\DatePicker::make('birthdate')->label('تاريخ الميلاد')->required()
-
-                ,
+                Forms\Components\DatePicker::make('birthdate')->label('تاريخ الميلاد')->required(),
                 Forms\Components\TextInput::make('passport_number')
                     ->maxLength(255)
                     ->label('رقم جواز السفر')
@@ -86,6 +84,8 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->label('اسم المستخدم')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image')
+                    ->label('صورة المستخدم'),
                 Tables\Columns\TextColumn::make('phone')
                     ->label('رقم الهاتف')
                     ->searchable(),

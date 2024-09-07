@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('booking_contact', function (Blueprint $table) {
+        Schema::create('booking_contacts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('reservation_id')->constrained('reservations');

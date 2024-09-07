@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('country')->nullable();  // إضافة حقل الدولة
             $table->string('email')->unique();
             $table->boolean('is_active')->default(true)->nullable();
+            $table->string('image')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

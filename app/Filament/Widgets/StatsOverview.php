@@ -18,8 +18,7 @@ class StatsOverview extends BaseWidget
     {
         return [
             Stat::make('اجمالي المدفوعات', number_format(
-                Payment::whereDate('created_at', Carbon::today())
-                    ->where('payment_status', 'تم الدفع')
+                Payment::where('payment_status', 'تم الدفع')
                     ->sum('amount'),
                 2,
                 '.',
