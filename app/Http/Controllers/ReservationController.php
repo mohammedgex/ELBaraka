@@ -56,7 +56,7 @@ class ReservationController extends Controller
         LocalNotification::create([
             'user_id' => auth()->id(),
             'title' => 'تمت عملية حجز',
-            'content' => 'تم بنجاح حجز وسيلة نقل ',
+            'content' => ' تم بنجاح حجز وسيلة نقل لك ',
         ]);
 
         return response()->json([

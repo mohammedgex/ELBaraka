@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompanyHqPaymentRequestController;
 use App\Http\Controllers\LocalNotificationController;
 use App\Http\Controllers\PaymentController;
@@ -24,6 +25,13 @@ Route::middleware('auth:sanctum')->get('/user', [AuthController::class, 'getUser
 
 // get buses
 Route::get('/buses-with-routes', [BusController::class, 'getBusesWithRoutes']);
+Route::get('/categories/{categoryId}', [BusController::class, 'getBusesByCategory']);
+
+// get category
+Route::get('/categories', [CategoryController::class, 'index']);
+
+Route::middleware('auth:sanctum')->post('/reservations/{reservationId}/cancel', [ReservationController::class, 'cancelReservation']);
+
 
 // update user profile
 Route::middleware('auth:sanctum')->post('/update-profile', [AuthController::class, 'updateProfile']);

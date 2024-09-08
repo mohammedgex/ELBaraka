@@ -29,10 +29,8 @@ class User extends Authenticatable
         'name',
         'phone',
         'email',
-        'birthdate',
-        'passport_number',
+        'is_blocked',
         'password',
-        'country',
         'is_active',
         'image'
     ];

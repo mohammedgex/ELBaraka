@@ -13,11 +13,12 @@ class Reservation extends Model
         'bus_id',
         'bus_route_id',
         'num_pilgrims',
-        'num_buses',
+        'num_bags',
         'umrah_company',
         'mecca_hotel_name',
         'medina_hotel_name',
-        'reservation_status'
+        'reservation_status',
+        'payment_status'
     ];
 
 

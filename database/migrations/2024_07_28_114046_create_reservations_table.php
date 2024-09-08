@@ -16,11 +16,12 @@ return new class extends Migration {
             $table->foreignId('bus_id')->constrained('buses')->cascadeOnDelete();
             $table->foreignId('bus_route_id')->constrained('bus_routes')->cascadeOnDelete();
             $table->integer('num_pilgrims');
-            $table->integer('num_buses');
+            $table->integer('num_bags');
             $table->string('umrah_company');
             $table->string('mecca_hotel_name');
             $table->string('medina_hotel_name');
             $table->enum('reservation_status', ['جاري المعالجة', 'مقبول', 'مرفوض'])->default('جاري المعالجة');
+            $table->enum('payment_status', ['جاري المعالجة', 'تم الدفع', 'لم يتم الدفف'])->default('جاري المعالجة');
             $table->timestamps();
         });
     }

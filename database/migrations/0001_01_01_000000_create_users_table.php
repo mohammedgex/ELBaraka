@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('phone')->nullable();
-            $table->date('birthdate')->nullable();
-            $table->string('passport_number')->unique()->nullable();
-            $table->string('country')->nullable();  // إضافة حقل الدولة
+            $table->boolean('is_blocked')->nullable();
             $table->string('email')->unique();
             $table->boolean('is_active')->default(true)->nullable();
             $table->string('image')->nullable();

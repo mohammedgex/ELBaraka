@@ -17,10 +17,7 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'phone' => 'required|string|max:11',
             'email' => 'required|string|email|max:255',
-            'birthdate' => 'required|date',
-            'passport_number' => 'required|string|max:8',
             'password' => 'required|string|min:8',
-            'country' => 'required|string|max:100',
             'image' => 'required|image|max:2048',
         ]);
 
@@ -43,11 +40,9 @@ class AuthController extends Controller
         $user->name = $request->name;
         $user->phone = $request->phone;
         $user->email = $request->email;
-        $user->birthdate = $request->birthdate;
-        $user->passport_number = $request->passport_number;
         $user->password = bcrypt($request->password);
-        $user->country = $request->country;
         $user->is_active = false;
+        $user->is_blocked = false;
         if ($request->has('image')) {
             $filename = Str::random(32) . "." . $request->image->getClientOriginalExtension();
             $request->image->move('uploads/', $filename);
